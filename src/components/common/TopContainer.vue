@@ -32,7 +32,7 @@
               <a class="i-link" target="_blank" href="//zb.bilibili.com/" title="周边">周边</a>
             </li>
             <li class="planet">
-              <a class="i-link" target="_blank" href="//planet2019.bilibili.com/" title="拜年祭2019">
+              <a class="i-link" target="_blank" href="//planet2017.bilibili.com/" title="拜年祭2019">
                 拜年祭
                 <em class="new"></em>
               </a>
@@ -89,8 +89,8 @@ export default {
   },
   methods: {
     showPostMenu() {
-     this.isShowPostMenu = !this.isShowPostMenu;
-    } 
+      this.isShowPostMenu = !this.isShowPostMenu;
+    }
   }
 };
 </script>

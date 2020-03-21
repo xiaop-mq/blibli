@@ -1,4 +1,4 @@
-import { bannerApi } from 'api'
+import { bannerApi } from '@/api'
 import * as TYPE from '../actionType/bannerType'
 
 const state = {
@@ -36,6 +36,7 @@ const mutations = {
 }
 
 export default {
+	// namespaced: true,
 	state,
 	getters,
 	actions,

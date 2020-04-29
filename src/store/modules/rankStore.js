@@ -12,6 +12,7 @@ const getters = {
 	ranklist0: state => state.ranklist0,
 	ranklist1: state => state.ranklist1,
 	ranklist2: state => state.ranklist2
+
 }
 
 const actions = {

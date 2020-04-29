@@ -3,7 +3,7 @@
     <TopContainer></TopContainer>
     <BHeader></BHeader>
     <BContent :rows="rows"></BContent>
-    <!-- <BNavSide :options="options" v-on:change="isShowMask"></BNavSide> -->
+    <BNavSide :options="options" v-on:change="isShowMask"></BNavSide>
     <div class="wnd-mask" ref="mask" v-show="showMask"></div>
   </div>
 </template>
@@ -12,16 +12,40 @@
 import TopContainer from './components/common/TopContainer.vue'
 import BHeader from './components/common/BHeader.vue'
 import BContent from './components/content/BContent.vue'
-// import BNavSide from 'components/nav/BNavSide'
+import BNavSide from './components/nav/BNavSide.vue'
 
 import { mapGetters } from 'vuex'
 export default {
   name: 'app',
+    //定义metaInfo
+    metaInfo(){
+        return{
+            title: '哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ  乾杯~  - bilibili',
+                meta:[
+                    { charset: 'utf-8' },
+                    {
+                        name:'keywords',
+                        content:'B站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid'
+                    },{
+                        name:"description",
+                        content:'bilibili是国内知名的视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。'
+                    },
+                    {
+                        name:'referrer',
+                        content:'no-referrer'
+                    },
+                     {
+                        name:'referrer',
+                        content:'never'
+                    }
+                ]
+        }
+    },
   components: {
     TopContainer,
     BHeader,
     BContent,
-    // BNavSide
+    BNavSide
   },
   mounted() {
     this.$store.dispatch('getContentRows')
@@ -63,6 +87,8 @@ export default {
 </script>
 
 <style lang="stylus">
+
+
   #app 
     font-family "Microsoft YaHei",Arial,Helvetica,sans-serif
     -webkit-font-smoothing antialiased
@@ -74,6 +100,15 @@ export default {
     min-width 990px
     tap-highlight-color transparent
     -webkit-tap-highlight-color transparent
+
+    filter grayscale(100%)
+    -webkit-filter grayscale(100%)
+    -moz-filter grayscale(100%)
+    -ms-filter grayscale(100%)
+    -o-filter grayscale(100%)
+    filter url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+    filter progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)
+    -webkit-filter: grayscale(1)
     .wnd-mask
       position fixed
       width 100%

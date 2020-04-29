@@ -1,6 +1,6 @@
 
 const serverRoot = `${process.env.NODE_ENV === 'production' ? 'http://www.lybenson.com' : 'http://127.0.0.1'}:9050`
-// 封装分离 访问 serverRoot（9050）+ 对应的文件入口
+
 export const banner = serverRoot + '/banner'
 
 export const ranking0 = serverRoot + '/ranking0'

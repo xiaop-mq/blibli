@@ -1,4 +1,4 @@
-// 各分类内容 api文件 api 数据 动态 连接数据库
+// 各分类内容
 export const ding = 'http://www.bilibili.com/index/ding.json'
 
 // 轮播图
@@ -36,6 +36,10 @@ export const ranking1 = 'https://www.bilibili.com/index/catalogy/1-week.json'
 // 昨日排行
 export const randking2 = 'https://www.bilibili.com/index/catalogy/1-1day.json'
 
+// 最底部特别推荐
+export const recommend = 'http://www.bilibili.com/index/recommend.json'
+
+export const rankbase = 'http://www.bilibili.com/index/catalogy/'
 // 各分类下3日排行 http://www.bilibili.com/index/catalogy/
 // 动画排行 1-3day.json
 // 番剧排行 13-3day.json
